@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro</title>
+</head>
+
+<script>
+	function myFunction()
+	{
+		var x;	 
+		var idade=prompt("Digite seu email:");
+		 
+		if (idade!=null)
+		  {
+		  	x="Idade: " + idade + " anos.";
+		  	document.getElementById("demo").innerHTML=x;
+		  }
+	}
+</script>
+
+<body>
+	<form>
+		<h2 align="center">Cadastro</h2>
+		<div align="center">
+			<p>
+				<button onclick="myFunction()">Digitar Nome</button>
+				<input type="button" value="Digitar Email">
+				<input type="button" value="Cadastrar">
+			</p>
+			<textarea rows=10 cols=40 name=Area></textarea>
+		</div>
+	</form>
+</body>
+</html>
