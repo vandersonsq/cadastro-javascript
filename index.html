@@ -4,12 +4,16 @@
 	<title>Cadastro</title>
 </head>
 
-<script>
-	function myFunction()
-	{ 
-		var nome = prompt("Digite seu nome:");
-		var email = prompt("Digite seu email:");
-		
+<script type="text/javascript">
+	var nome;
+	var email;
+	var num = 0;
+
+	function escrever(quadro) {
+		info = "Usuário número "+(++num) + "\n";
+		info += "Nome: " + nome + "\n";
+		info += "Email: " + email + "\n\n";
+		quadro.value += info;
 	}
 </script>
 
@@ -17,10 +21,17 @@
 	<form>
 		<h2 align="center">Cadastro</h2>
 		<div align="center">
+			<script language=javascript type="text/javascript">
+				now = new Date
+				document.write ("Hoje é " 
+					+ now.getDate() + " de " 
+					+ now.getMonth() + " de " 
+					+ now.getFullYear() )
+			</script>
 			<p>
-				<button onclick="myFunction()">Digitar Nome</button>
-				<button onclick="myFunction()">Digitar Email</button>
-				<input type="button" value="Cadastrar">
+				<input type=button value="Digitar nome" onclick="nome=prompt('Seu nome','')">
+				<input type=button value="Digitar email" onclick="email=prompt('Seu email','')">
+				<input type=button value="Cadastrar" onclick="escrever(this.form.Area)">
 			</p>
 			<textarea rows=10 cols=40 name=Area></textarea>
 		</div>
