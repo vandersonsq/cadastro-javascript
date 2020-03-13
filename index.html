@@ -15,6 +15,12 @@
 		info += "Email: " + email + "\n\n";
 		quadro.value += info;
 	}
+	function alertaCadastros()
+	{
+		alert(
+				"Nome: " + nome + "\n"
+				+ "Email: " + email + "\n")
+	}
 </script>
 
 <body>
@@ -22,16 +28,19 @@
 		<h2 align="center">Cadastro</h2>
 		<div align="center">
 			<script language=javascript type="text/javascript">
-				now = new Date
-				document.write ("Hoje é " 
-					+ now.getDate() + " de " 
-					+ now.getMonth() + " de " 
-					+ now.getFullYear() )
+				hoje = new Date()
+				dia = hoje.getDate()
+				mes = hoje.getMonth() + 1
+				ano = hoje.getYear() + 1900
+
+				document.write ("Hoje é "+ dia + "/"+ mes +"/"+ano)
 			</script>
 			<p>
 				<input type=button value="Digitar nome" onclick="nome=prompt('Seu nome','')">
 				<input type=button value="Digitar email" onclick="email=prompt('Seu email','')">
 				<input type=button value="Cadastrar" onclick="escrever(this.form.Area)">
+
+				<input type="button" onclick="alertaCadastros()" value="Exibir Alert" />
 			</p>
 			<textarea rows=10 cols=40 name=Area></textarea>
 		</div>
